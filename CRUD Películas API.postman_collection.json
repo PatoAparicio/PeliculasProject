@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "cabb0353-575f-4bd1-b38a-0d9a823f21cc",
+		"name": "CRUD Películas API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34093666"
+	},
+	"item": [
+		{
+			"name": "Listar Películas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/pelicula",
+				"description": "Lista todos los registros de Películas"
+			},
+			"response": []
+		},
+		{
+			"name": "Lista un registro de Películas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/pelicula/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categorías",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/categoria"
+			},
+			"response": []
+		},
+		{
+			"name": "Nuevo registro de Películas (POST-Form)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Harry Potter 2 ",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Harry desc",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "10.0",
+							"type": "text"
+						},
+						{
+							"key": "categoria",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/C:/Users/Patricia/Downloads/harry.jpeg"
+						},
+						{
+							"key": "_method",
+							"value": "put",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/pelicula"
+			},
+			"response": []
+		},
+		{
+			"name": "Nuevo registro de Categoria (POST-JSON)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Ficción\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/categoria"
+			},
+			"response": []
+		},
+		{
+			"name": "Edición película (PUT-FORM)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Inception edit",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Dom Cobb es un ladrón con una extraña habilidad para entrar a los sueños de la gente y robarles los secretos de sus subconscientes.",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "20.8",
+							"type": "text"
+						},
+						{
+							"key": "categoria",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "_method",
+							"value": "put",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/pelicula/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminación película (DELETE)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/pelicula/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminación categoría (DELETE)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/categoria/1"
+			},
+			"response": []
+		}
+	]
+}
