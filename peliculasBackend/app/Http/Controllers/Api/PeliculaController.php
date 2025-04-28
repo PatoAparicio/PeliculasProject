@@ -20,7 +20,7 @@ class PeliculaController extends Controller
     }
 
     public function indexDisponibles(){
-        $peliculas = Pelicula::where('is_deleted', false)->get();
+        $peliculas = Pelicula::where('is_deleted', false)->with('categoria')->get();
         return response()->json(["mensaje"=>"Películas disponibles cargadas","datos"=>$peliculas ]);
     }
 
@@ -118,7 +118,7 @@ class PeliculaController extends Controller
     }
     public function show(string $id)
     {
-        $pelicula = Pelicula::where('id',$id)->first();
+        $pelicula = Pelicula::with('categoria')->find($id);
         return response()->json(["mensaje"=>"Registro cargado","datos"=>$pelicula]);
     }
 

@@ -26,6 +26,7 @@ Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy']);
 Route::get('/pelicula', [PeliculaController::class, 'index']);
 Route::post('/pelicula', [PeliculaController::class, 'store']);
 Route::get('/pelicula/{id}', [PeliculaController::class, 'show']);
+Route::get('/pelicula-activas', [PeliculaController::class, 'indexDisponibles']);
 Route::put('/pelicula/{id}', [PeliculaController::class, 'update']);
 Route::delete('/pelicula/{id}', [PeliculaController::class, 'destroy']);
 
