@@ -213,6 +213,7 @@ onMounted(() => {
   obtenerCategorias();
   if (idPelicula !== "") {
     verRegistro();
+    
   }
 });
 

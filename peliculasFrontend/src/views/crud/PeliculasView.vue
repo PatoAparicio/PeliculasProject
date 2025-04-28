@@ -167,6 +167,7 @@
                         >
                       </h6>
                       <h3 class="card-title">{{ dato.nombre }}</h3>
+                      <p>{{ dato.categoria?.nombre }}</p>
                       <p class="card-text">{{ dato.descripcion }}</p>
                       <h4 class="card-text">Precio: {{ dato.precio }}</h4>
                     </div>

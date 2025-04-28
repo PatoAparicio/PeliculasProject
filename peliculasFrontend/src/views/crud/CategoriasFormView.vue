@@ -66,19 +66,20 @@
 
 <script setup>
 import navbarLayout from "@/layout/navbarLayout.vue";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { show, update, store } from "@/services/CategoriaServices";
 import Swal from "sweetalert2";
 
 const router = useRouter();
-const idCategoria = router.currentRoute.value.params.idCategoria || null;
+const idCategoria = router.currentRoute.value.params.idCategoria;
 const errors = ref({});
 const formulario = ref({
   nombre: "",
 });
 
 onMounted(() => {
+  console.log("ID de la categoría desde la URL:", idCategoria.value);
   if (idCategoria) {
     verRegistro();
   }

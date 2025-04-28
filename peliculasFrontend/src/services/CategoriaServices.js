@@ -1,4 +1,4 @@
-import { http, httpAsset, API_BASE_URL } from "./Http";
+import { http, API_BASE_URL } from "./Http";
 
 export const indexCategoria = () => {
     return http().get(`${API_BASE_URL}categoria`);

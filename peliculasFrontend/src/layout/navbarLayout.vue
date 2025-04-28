@@ -8,6 +8,9 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item px-4">
+                            <router-link class="nav-link" to="/"> Home</router-link>
+                        </li>
+                        <li class="nav-item px-4">
                             <router-link class="nav-link" to="/peliculas"> Películas</router-link>
                         </li>
                         <li class="nav-item px-4">

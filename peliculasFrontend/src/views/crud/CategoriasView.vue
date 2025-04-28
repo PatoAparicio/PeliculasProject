@@ -72,6 +72,11 @@
                           <td class="text-center">
                             <div class="btn-group">
                               <i
+                                class="bi bi-pencil text-primary btn-action cursor-pointer mx-1"
+                                @click="editar(dato.id)"
+                                
+                              ></i>
+                              <i
                                 class="btn-action cursor-pointer mx-1"
                                 :class="{
                                   'bi bi-check2 text-success': dato.is_deleted,
@@ -103,6 +108,7 @@ import { indexCategoria, changeStatus } from "@/services/CategoriaServices.js";
 import Swal from "sweetalert2";
 const router = useRouter();
 const datos = ref([]);
+const dato = ref([]);
 const formulario = ref({
   nombre: "",
 });
@@ -147,6 +153,7 @@ const estado = async (param) => {
     //console.log(error);
   }
 };
+
 
 const editar = (param) => {
   router.push({ path: `/categorias-form/${param}` });
